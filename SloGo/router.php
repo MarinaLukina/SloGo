@@ -20,6 +20,14 @@ if ($url[1] == "auth") {
   echo User::getUser($_SESSION['id']);
 } else if ($url[1] == "getUsers") {
   echo User::getUsers();
+} else if ($url[1] == "word") {
+  $content = file_get_contents("pages/word.html");
+} else if ($url[1] == "sent") {
+  $content = file_get_contents("pages/sentence.html");
+  } else if ($url[1] == "edu") {
+  $content = file_get_contents("pages/education.html");
+} else if ($url[1] == "con") {
+  $content = file_get_contents("pages/contact.php");
 } else {
   $content = file_get_contents("pages/index.php");
 }
